@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button";
+import { Button } from '../Button/Button';
 
 interface Iprops {
   setNum: React.Dispatch<React.SetStateAction<number>>;
@@ -16,16 +16,16 @@ export const Counter = ({
   setTotalAmount,
 }: Iprops) => {
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 shadow-xl">
       <Button
         onClick={() => {
           setNum(num + 1);
           setTotalAmount(totalAmount + singleProductPrice);
         }}
         style={
-          "rounded-r-md text-white bg-red-500 w-6 flex items-center justify-center"
+          'rounded-r-md text-white bg-[#028090] w-6 flex items-center justify-center'
         }
-        children={"+"}
+        children={'+'}
       />
       <span className="px-1">{num}</span>
       <Button
@@ -36,9 +36,9 @@ export const Counter = ({
           }
         }}
         style={
-          "rounded-l-md text-white bg-red-500 w-6 flex items-center justify-center"
+          'rounded-l-md text-white bg-[#028090] w-6 flex items-center justify-center'
         }
-        children={"-"}
+        children={'-'}
       />
     </div>
   );

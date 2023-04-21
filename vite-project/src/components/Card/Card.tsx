@@ -19,7 +19,7 @@ export const Card = ({
   const [num, setNum] = useState(0);
 
   return (
-    <div className="w-full flex justify-between bg-white p-3 rounded-md col-span-1">
+    <div className="w-full flex justify-between bg-[#e3f2fd] p-3 rounded-xl col-span-1 shadow-xl">
       <div className="w-full flex gap-3">
         <div className=" my-auto">
           <img src={src} className="w-24 h-20 rounded-xl" alt="" />
