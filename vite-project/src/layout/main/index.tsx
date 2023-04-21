@@ -18,7 +18,7 @@ export const Main = () => {
   console.log(renderData(data));
   return (
     <>
-      <main className="col-span-1 bg-[#F0F8FF] p-5 m-5 rounded-xl">
+      <main className="col-span-2 bg-[#F0F8FF] p-5 m-5 rounded-xl">
         <div className="w-full text-center mb-5 text-xl font-bold">
           رستوران مک دونالد شعبه تهران
         </div>

@@ -3,7 +3,7 @@ import { Main } from './layout/main';
 function App() {
   return (
     <>
-      <div className="bg-red-500 grid grid-cols-1">
+      <div className="bg-red-500 grid grid-cols-1 md:grid-cols-3">
         <Main />
         <Sidebar />
       </div>

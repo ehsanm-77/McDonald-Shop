@@ -2,7 +2,7 @@ import { Button } from '../../components/Button/Button';
 export const Sidebar = () => {
   return (
     <>
-      <div className="col-span-1 bg-[#F0F8FF] p-5 m-5 rounded-xl">
+      <div className="col-span-1 bg-[#F0F8FF] p-5 m-5 rounded-xl md:h-96">
         <div className=" flex flex-col gap-3">
           <div className="flex justify-between text-xl">
             <span>جمع کل سفارشات:</span>
@@ -19,7 +19,7 @@ export const Sidebar = () => {
           <div className="w-full flex">
             <input
               type="text"
-              className="p-2 flex-1 rounded-r-md"
+              className="p-2 flex-1 rounded-r-md focus:outline-none"
               placeholder="کد تخفیف"
             />
             <Button
