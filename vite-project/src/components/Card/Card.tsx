@@ -5,24 +5,39 @@ type card = {
   title: string;
   price: number;
   src: string;
+  totalAmount: number;
+  setTotalAmount: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export const Card = (props: card) => {
+export const Card = ({
+  title,
+  src,
+  price,
+  totalAmount,
+  setTotalAmount,
+}: card) => {
   const [num, setNum] = useState(0);
+
   return (
     <div className="w-full flex justify-between bg-white p-3 rounded-md col-span-1">
       <div className="w-full flex gap-3">
-        <div>
-          <img src={props.src} className="w-20 h-full" alt="" />
+        <div className=" my-auto">
+          <img src={src} className="w-24 h-20 rounded-xl" alt="" />
         </div>
         <div className="w-full flex flex-col gap-4">
           <div>
-            <div className="text-lg font-semibold">{props.title}</div>
-            <div className="text-lg">تومان {props.price}</div>
+            <div className="text-lg font-semibold">{title}</div>
+            <div className="text-lg">{price} تومان</div>
           </div>
           <div className="w-full flex">
-            <Counter num={num} setNum={setNum} />
-            <div className="mr-auto">{props.price * num} تومان</div>
+            <Counter
+              singleProductPrice={price}
+              num={num}
+              setNum={setNum}
+              totalAmount={totalAmount}
+              setTotalAmount={setTotalAmount}
+            />
+            <div className="mr-auto">{price * num} تومان</div>
           </div>
         </div>
       </div>

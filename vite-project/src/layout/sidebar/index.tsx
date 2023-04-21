@@ -1,12 +1,17 @@
-import { Button } from '../../components/Button/Button';
-export const Sidebar = () => {
+import { Button } from "../../components/Button/Button";
+
+type sideBar = {
+  totalAmount: number;
+};
+
+export const Sidebar = ({ totalAmount }: sideBar) => {
   return (
     <>
       <div className="col-span-1 bg-[#F0F8FF] p-5 m-5 rounded-xl md:h-96">
         <div className=" flex flex-col gap-3">
           <div className="flex justify-between text-xl">
             <span>جمع کل سفارشات:</span>
-            <span>0 تومان</span>
+            <span>{totalAmount} تومان</span>
           </div>
           <div className="flex justify-between text-xl">
             <span>حق سرویس و کارمزد:</span>
@@ -23,8 +28,8 @@ export const Sidebar = () => {
               placeholder="کد تخفیف"
             />
             <Button
-              style={'bg-red-700 rounded-l-md p-2 px-3 text-white'}
-              children={'✔'}
+              style={"bg-red-700 rounded-l-md p-2 px-3 text-white"}
+              children={"✔"}
             />
           </div>
         </div>
@@ -35,8 +40,8 @@ export const Sidebar = () => {
           </div>
           <div>
             <Button
-              style={'bg-red-700 rounded-md w-full py-3 text-white'}
-              children={'ثبت سفارش'}
+              style={"bg-red-700 rounded-md w-full py-3 text-white"}
+              children={"ثبت سفارش"}
             />
           </div>
         </div>

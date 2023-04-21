@@ -1,7 +1,12 @@
 import { Card } from '../../components/Card/Card';
 import { data } from '../../data/data';
 
-export const Main = () => {
+type main = {
+  totalAmount: number;
+  setTotalAmount: React.Dispatch<React.SetStateAction<number>>;
+};
+
+export const Main = ({ totalAmount, setTotalAmount }: main) => {
   const renderData = (
     data: {
       id: number;
@@ -11,15 +16,25 @@ export const Main = () => {
     }[]
   ) => {
     return data.map((item) => {
-      console.log(item);
-      return <Card title={item.title} price={item.price} src={item.image} />;
+      // console.log(item);
+      return (
+        <Card
+          key={item.id}
+          title={item.title}
+          price={item.price}
+          src={item.image}
+          totalAmount={totalAmount}
+          setTotalAmount={setTotalAmount}
+        />
+      );
     });
   };
-  console.log(renderData(data));
+  // console.log(totalAmount);
+  // console.log(renderData(data));
   return (
     <>
       <main className="col-span-2 bg-[#F0F8FF] p-5 m-5 rounded-xl">
-        <div className="w-full text-center mb-5 text-xl font-bold">
+        <div className="w-full text-center mb-5 text-xl font-bold border-b-2 pb-4">
           رستوران مک دونالد شعبه تهران
         </div>
         <div className="flex flex-wrap gap-4 md:grid md:grid-cols-2">
