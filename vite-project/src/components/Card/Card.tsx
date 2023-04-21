@@ -22,7 +22,7 @@ export const Card = (props: card) => {
           </div>
           <div className="w-full flex">
             <Counter num={num} setNum={setNum} />
-            <div className="mr-auto">تومان 0</div>
+            <div className="mr-auto">{props.price * num} تومان</div>
           </div>
         </div>
       </div>
